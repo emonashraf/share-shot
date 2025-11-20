@@ -1,0 +1,38 @@
+/* ======================  Cta Start  ======================*/
+.cta {
+    position: relative;
+    z-index: 1;
+    background-color: hsl(var(--base-l-900)/0.8) ;
+    border: 1px solid hsl(var(--border-color));
+    padding-inline: clamp(1.25rem, 0.781rem + 2.344vw, 3.125rem);
+    border-radius: var(--b-radius-12);
+
+    &__inner {
+        text-align: center;
+    }
+
+   
+    &__title {
+        font-size: clamp(1.625rem, 1.094rem + 2.656vw, 3.75rem);
+        margin-bottom: clamp(0.938rem, 0.859rem + 0.391vw, 1.25rem);
+    }
+
+    &__desc {
+        max-width: 650px;
+        margin-inline: auto;
+    }
+
+    &__btns {
+        display: flex;
+        gap: clamp(0.625rem, 0.469rem + 0.781vw, 1.25rem);
+        justify-content: center;
+        margin-top: clamp(1.25rem, 1.094rem + 0.781vw, 1.875rem);
+        flex-wrap: wrap;
+    }
+
+    &__info {
+        margin-top: clamp(0.938rem, 0.859rem + 0.391vw, 1.25rem);
+    }
+}
+
+/* ======================  Cta End  ======================*/

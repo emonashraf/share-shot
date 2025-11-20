@@ -1,0 +1,112 @@
+<!-- meta tags and other links -->
+@@include('../partials/_template-top.html')
+
+<!--==========================  Dashboard Section Start  ==========================-->
+<div class="dashboard">
+  @@include('../partials/_user-header.html')
+  <div class="container">
+    <div class="dashboard__wrap">
+      <div class="row gy-4">
+        <div class="col-xl-6 col-xxl-5">
+          <div class="card">
+            <div class="row gy-4">
+              <div class="col-12">
+                <h4 class="title">Generate Tweet</h4>
+                <p>Create Ai-powered content in seconds</p>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Topic or Idea</label>
+                <textarea class="form-control" placeholder="What do you want to tweet about?"></textarea>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Content Type</label>
+                <div class="d-flex flex-wrap  gap-3">
+                  <a href="#" class="btn btn--base flex-grow-1">Tweet</a>
+                  <a href="#" class="btn btn-outline--base flex-grow-1">Thread</a>
+                </div>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Tone</label>
+                <select id="country" name="country" class=" select2" required>
+                  <option value="">Select Country</option>
+                  <option value="bd">Bangladesh</option>
+                  <option value="us">United State of America</option>
+                  <option value="uk">United Kingdom</option>
+                  <option value="in">India</option>
+                  <option value="aus">Australia</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <a href="#" class="btn btn--base">Generate</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6 col-xxl-7">
+          <div class="row gy-3">
+            <div class="col-12">
+              <h3>Your Generated Tweets</h3>
+              <span>2 tweets created</span>
+            </div>
+            <div class="col-12">
+              <div class="card">
+                <div class="tweet-gen">
+                  <div class="tweet-gen__thumb">
+                    <img src="assets/images/tweet/1.jpg" alt="img">
+                  </div>
+                  <div class="tweet-gen__body">
+                    <div class="tweet-gen__top">
+                      <div class="tweet-gen__heading">
+                        <h5 class="tweet-gen__title">TweetCraft</h5>
+                        <span class="tweet-gen__time">12:27 PM</span>
+                      </div>
+                      <span class="badge badge--base rounded-pill">Tweet</span>
+                    </div>
+                    <p class="tweet-gen__desc">Just launched TweetCraft - the AI-powered tool that transforms your
+                      ideas
+                      into viral tweets.
+                      No more staring at blank screens. your voice, amplified. <span>&#x1F680;</span></p>
+                    <div class="tweet-gen__action">
+                      <button><i class="fa-solid fa-heart text--danger"></i> Liked</button>
+                      <button><i class="fa-regular fa-copy"></i> Copy</button>
+                      <button><i class="fa-solid fa-trash-can"></i> Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card">
+                <div class="tweet-gen">
+                  <div class="tweet-gen__thumb">
+                    <img src="assets/images/tweet/1.jpg" alt="img">
+                  </div>
+                  <div class="tweet-gen__body">
+                    <div class="tweet-gen__top">
+                      <div class="tweet-gen__heading">
+                        <h5 class="tweet-gen__title">TweetCraft</h5>
+                        <span class="tweet-gen__time">12:27 PM</span>
+                      </div>
+                      <span class="badge badge--base rounded-pill">Tweet</span>
+                    </div>
+                    <p class="tweet-gen__desc">Just launched TweetCraft - the AI-powered tool that transforms your
+                      ideas
+                      into viral tweets.
+                      No more staring at blank screens. your voice, amplified. <span>&#x1F680;</span></p>
+                    <div class="tweet-gen__action">
+                      <button><i class="fa-regular fa-heart text--danger"></i> Liked</button>
+                      <button><i class="fa-regular fa-copy"></i> Copy</button>
+                      <button><i class="fa-solid fa-trash-can"></i> Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--==========================  Dashboard Section End  ==========================-->
+@@include('../partials/_template-bottom.html')

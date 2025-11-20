@@ -1,0 +1,115 @@
+/* ======================  Banner Start  ======================*/
+.banner {
+  position: relative;
+  padding-top: clamp(6.25rem, 5.156rem + 5.469vw, 10.625rem);
+  min-height: 100%;
+  width: 100%;
+  background-color: hsl(var(--base)/ 0.02);
+
+  &::before {
+    content: '';
+    @include glove--base;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    content: '';
+    @include glove--base-two;
+    right: 10%;
+    bottom: 0;
+  }
+
+  &__content {
+    max-width: 900px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline: auto;
+    align-items: center;
+
+  }
+
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--body-font-2);
+    font-size: clamp(2.188rem, 1.547rem + 3.203vw, 4.75rem);
+    font-weight: 400;
+    margin-bottom: clamp(0.438rem, 0.313rem + 0.625vw, 0.938rem);
+    color: hsl(var(--heading-color)/ 0.85);
+
+    img {
+      max-width: rem(175px);
+      border-radius: 50px;
+    }
+  }
+
+  &__title {
+    margin-bottom: clamp(0.625rem, 0.469rem + 0.781vw, 1.25rem);
+  }
+
+  &__desc {
+    max-width: 760px;
+    margin-inline: auto;
+    font-size: clamp(0.938rem, 0.891rem + 0.234vw, 1.125rem);
+  }
+
+  &__btns {
+    display: flex;
+    gap: clamp(0.625rem, 0.469rem + 0.781vw, 1.25rem);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__info {
+    position: relative;
+    z-index: 1;
+
+    .col-md-6 {
+      &:nth-child(even) {
+        .banner__info-item {
+          background-color: hsl(var(--base-two)/0.1);
+          border: 1px solid hsl(var(--base-two)/ 0.15);
+          
+        }
+        .banner__info-icon{
+          background-color: hsl(var(--base-two));
+        }
+      }
+    }
+
+    &-item {
+      background-color: hsl(var(--base)/ 0.05);
+      border: 1px solid hsl(var(--base)/ 0.1);
+      padding: clamp(0.875rem, 0.656rem + 1.094vw, 1.75rem);
+      border-radius: var(--b-radius-16);
+    }
+
+    &-top {
+      display: flex;
+      align-items: center;
+      gap: rem(12px);
+      margin-bottom: rem(12px);
+    }
+
+    &-icon {
+      width: rem(40px);
+      height: rem(40px);
+      border-radius: 50%;
+      background-color: hsl(var(--base));
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+
+      img {
+        max-width: rem(25px);
+      }
+    }
+
+  }
+}
