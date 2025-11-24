@@ -3,17 +3,38 @@
   position: relative;
   margin-bottom: clamp(2.5rem, 2.188rem + 1.563vw, 3.75rem);
   z-index: 2;
-  max-width: rem(650px);
+  max-width: rem(850px);
   margin-inline: auto;
   text-align: center;
 
   &__name {
-   background-color: hsl(var(--white)/ 0.1);
+    background-color: hsl(var(--base)/ 0.05);
+    color: hsl(var(--base));
+    border: 1px solid hsl(var(--border-color));
     width: fit-content;
-    padding: 6px 20px;
+    padding: 12px 40px;
     border-radius: 30px;
     backdrop-filter: blur(10px);
     margin-bottom: clamp(0.313rem, 0.234rem + 0.391vw, 0.625rem);
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
+    font-weight: 500;
+    &::before {
+      content: "\f111";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      font-size: 6px;
+      margin-right: 10px;
+    }
+    
+    &::after {
+      content: "\f111";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      margin-left: 10px;
+      font-size: 6px;
+    }
   }
 
   &__desc {
@@ -175,15 +196,16 @@
   background-size: clamp(1.563rem, 1.016rem + 2.734vw, 3.75rem) clamp(1.563rem, 1.016rem + 2.734vw, 3.75rem);
   mask-image: radial-gradient(ellipse 60% 70% at 50% 50%, hsl(var(--black)) 30%, transparent 70%);
 }
-.common__pattern-2{
+
+.common__pattern-2 {
   position: absolute;
-    inset: 0;
-    z-index: -1;
-    background-image:
-      linear-gradient(to right, hsl(var(--white)/ 0.1) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--white)/ 0.1) 1px, transparent 1px);
-    background-size: clamp(2.188rem, 1.641rem + 2.734vw, 4.375rem) clamp(2.188rem, 1.641rem + 2.734vw, 4.375rem);
-    mask-image: radial-gradient(ellipse 40% 80% at 50% 0%, hsl(var(--black)) 60%, transparent 100%);
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(to right, hsl(var(--white)/ 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, hsl(var(--white)/ 0.1) 1px, transparent 1px);
+  background-size: clamp(2.188rem, 1.641rem + 2.734vw, 4.375rem) clamp(2.188rem, 1.641rem + 2.734vw, 4.375rem);
+  mask-image: radial-gradient(ellipse 40% 80% at 50% 0%, hsl(var(--black)) 60%, transparent 100%);
 }
 
 /* ======================  patter-1 End  ======================*/

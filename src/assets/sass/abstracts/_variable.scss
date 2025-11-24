@@ -15,7 +15,7 @@
   --common-radius: 10px;
   --common-b-color: hsl(var(--body-color)/ 0.25);
   --common-p: clamp(0.75rem, 0.719rem + 0.156vw, 0.875rem) clamp(0.875rem, 0.75rem + 0.625vw, 1.375rem);
-  --common-p-sm: 12px 16px !important;
+  --common-p-sm: 8px 16px !important;
   --common-f-size: rem(14px);
 
   /* ========================= Theme Color Start ============================= */
@@ -42,8 +42,7 @@
   //Border Color
   @include colorVariable(--border-color, #ebebeb);
 
-  // Section Background
-  @include colorVariable(--section-bg, #dddddd);
+
 
   /* ================================ Box Shadow Start =============================== */
   --box-shadow: 0px 2px 8px 0px hsl(var(--black)/ 0.08);

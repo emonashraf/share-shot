@@ -2,16 +2,29 @@
 .cta {
     position: relative;
     z-index: 1;
-    background-color: hsl(var(--base-l-900)/0.8) ;
-    border: 1px solid hsl(var(--border-color));
+    background-color: hsl(var(--base-l-900)/0.8);
     padding-inline: clamp(1.25rem, 0.781rem + 2.344vw, 3.125rem);
-    border-radius: var(--b-radius-12);
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        @include glove--base;
+        left: -5%;
+        top: -10%;
+    }
+
+    &::after {
+        content: '';
+        @include glove--base-two;
+        right: -5%;
+        bottom: -10%;
+    }
 
     &__inner {
         text-align: center;
     }
 
-   
+
     &__title {
         font-size: clamp(1.625rem, 1.094rem + 2.656vw, 3.75rem);
         margin-bottom: clamp(0.938rem, 0.859rem + 0.391vw, 1.25rem);

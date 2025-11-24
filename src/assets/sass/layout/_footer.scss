@@ -1,11 +1,22 @@
 /* ============= Footer Start Here ======================= */
 .footer {
   position: relative;
-  background-color: hsl(var(--black)/ 0.9);
-  color: hsl(var(--white));
   margin-top: auto;
   z-index: 2;
   overflow: hidden;
+  &::before {
+        content: '';
+        @include glove--base;
+        left: -10%;
+        bottom: -30%;
+    }
+
+    &::after {
+        content: '';
+        @include glove--base-two;
+        right: -10%;
+        bottom: -30%;
+    }
 
   &__bg_top {
     position: absolute;
@@ -62,10 +73,7 @@
     .social-list {
       margin-top: 30px;
 
-      &__link {
-        background-color: hsl(var(--white) / 0.12);
-      }
-
+     
       @include md-screen {
         margin-top: 20px;
       }
@@ -93,17 +101,12 @@
 
   &__title {
     position: relative;
-    color: hsl(var(--white));
     margin: 0;
     width: fit-content;
     margin-bottom: clamp(1.25rem, 1.094rem + 0.781vw, 1.875rem);
     position: relative;
     font-family: var(--body-font);
     font-weight: 700;
-  }
-
-  &__desc {
-    color: hsl(var(--white) / 0.8);
   }
 
   &__menu {
@@ -116,14 +119,24 @@
     display: flex;
     gap: 4px;
     position: relative;
+    padding-left: 15px;
 
     &::before {
-      content: "\f101";
+      content: "\f111";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
       font-family: "Font Awesome 6 Free";
       font-weight: 900;
       display: inline-block;
-      margin-right: 8px;
-      color: hsl(var(--white));
+      color: hsl(var(--base));
+      font-size: 8px;
+    }
+    &:nth-child(even){
+      &::before{
+        color: hsl(var(--base-two));
+      }
     }
 
     &:last-child {
@@ -135,7 +148,6 @@
   }
 
   &__menu-link {
-    color: hsl(var(--white) / 0.89);
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -156,29 +168,19 @@
 
   &__form {
     position: relative;
-    .input-group{
-      border-color: hsl(var(--white)/ 0.2);
+    .input-group {
+     background-color: hsl(var(--base)/0.05);
+     border: 1px solid hsl(var(--base)/0.07);
+     
     }
-
     .form-control {
-      border: 1px solid hsl(var(--white)/ 0.15);
-      color: hsl(var(--white)) !important;
       padding-right: 10px;
-      &::placeholder{
-        color: hsl(var(--white)/0.6) !important;
-      }
-  
-
       ~button {
-        width: 45px;
-        height: 45px;
-        padding: 0;
-        background-color: hsl(var(--base));
-        margin: 5px;
-        border-radius: 6px  !important;
+        background-color: hsl(var(--base-two)) !important;;
         z-index: 1;
+        border: none !important;
         i {
-          color: hsl(var(--white));
+          color: hsl(var(--black));
           transition: 0.3s;
         }
       }
@@ -188,51 +190,19 @@
           i {
             transform: rotate(45deg);
           }
-        }
-      }
 
-      color: hsl(var(--white));
-
-      &::placeholder {
-        color: hsl(var(--white) / 0.41);
-      }
-
-      &:focus {
-        border-color: transparent;
-        box-shadow: none;
-      }
-
-      &[type="password"] {
-        color: hsl(var(--white) / 0.41);
-
-        &:focus {
-          color: hsl(var(--white) / 0.41);
-        }
-      }
-
-      &[type="file"] {
-        &::file-selector-button {
-          color: hsl(var(--white) / 0.41) !important;
-
-          &:hover {
-            color: hsl(var(--white) / 0.41);
-          }
         }
       }
     }
 
-    input:-webkit-autofill,
-    textarea:-webkit-autofill,
-    select:-webkit-autofill {
-      -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-      -webkit-text-fill-color: hsl(var(--white)) !important;
-      caret-color: hsl(var(--white));
-    }
   }
 
   &__bottom {
     padding: clamp(0.625rem, 0.406rem + 1.094vw, 1.5rem);
-    border-top: 1px solid hsl(var(--white)/ 0.2);
+    border-top: 1px solid hsl(var(--black)/ 0.06);
+    &-text{
+      font-weight: 500;
+    }
   }
 }
 

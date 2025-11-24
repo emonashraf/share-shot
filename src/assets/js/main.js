@@ -57,15 +57,35 @@
     $('#' + serviceId).addClass('show').siblings().removeClass('show');
   });
   // ========================= Service Section Hover Js End ===================
-  // ========================= Brand Js Start ===================
-  $('.brand-logo__slider').bxSlider({
-    minSlides: 4,
-    maxSlides: 4,
-    slideWidth: 170,
-    slideMargin: 10,
-    ticker: true,
-    speed: 20000
+  // ========================= Swiper Js Start ===================
+  const testimonialSwiper = new Swiper('.testimonial__slider', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: ".custom-next",
+      prevEl: ".custom-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 1.2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 1.3,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+    },
   });
+
   // ========================= Brand Js End ===================
   // ========================= Header Sticky Js Start ==============
   $(window).on('scroll', function () {
@@ -241,7 +261,7 @@
     interval: 100,
     origin: 'bottom',
   })
-  sr.reveal('.section-heading__desc, .choose-us__card, .testimonial__card, .blog__card', {
+  sr.reveal('.section-heading__desc, .choose-us__card, .blog__card', {
     delay: 100,
     interval: 200,
     origin: 'bottom',
@@ -249,7 +269,7 @@
   sr.reveal('.right-reveal, .banner__desc, .banner__info-item:nth-child(2)', {
     delay: 60,
     origin: 'right',
-     interval: 200,
+    interval: 200,
   })
   sr.reveal('.left-reveal, .banner__title, .banner__info-item:nth-child(1)', {
     delay: 60,

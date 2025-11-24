@@ -17,8 +17,8 @@
   <link rel="stylesheet" href="assets/css/line-awesome.min.css">
   <!-- Magnific Popup -->
   <link rel="stylesheet" href="assets/css/magnific-popup.css">
-  <!-- bx slider -->
-  <link rel="stylesheet" href="assets/css/jquery.bxslider.min.css">
+  <!-- swiper slider -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
   <!-- Select2 -->
   <link rel="stylesheet" href="assets/css/select2.min.css">
   <!-- Main css -->
@@ -165,7 +165,6 @@
 <main>
     <!-- ==================== Breadcrumb Start Here ==================== -->
 <section class="breadcrumb">
-  <div class="breadcrumb__pattern"></div>
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-8">
@@ -205,29 +204,33 @@
                             <div class="row justify-content-center gy-4">
                                 <div class="col-md-6 col-lg-4">
                                     <div class="pricing__card">
-                                        <h4 class="pricing__name">Free Plan</h4>
-                                        <h3 class="pricing__price">$00.<span>00</span><span>/month</span></h3>
-                                        <p class="pricing__desc">Seamless review and approval designed for freelancer
-                                        </p>
-                                        <ul class="pricing__list">
-                                            <li>24/5 Email, Chat Support</li>
-                                            <li>Multiple Workspaces</li>
-                                            <li>50 apps (Hosted in 6 locations)</li>
-                                            <li>No Feature Caps</li>
-                                            <li>Minimum 25 users</li>
-                                            <li>Extra Security and Compliance</li>
-                                        </ul>
-                                        <a href="#" class="btn btn-light--base w--100">GET START</a>
+                                        <div class="pricing__body">
+                                            <div class="pricing__icon"><i class="fa-solid fa-bolt"></i></div>
+                                            <h4 class="pricing__name">Free Plan</h4>
+                                            <p class="pricing__desc">Seamless review and approval designed for
+                                                freelancer
+                                            </p>
+                                            <h3 class="pricing__price">$00.00<span>/month</span></h3>
+                                            <ul class="pricing__list">
+                                                <li>24/5 Email, Chat Support</li>
+                                                <li>Multiple Workspaces</li>
+                                                <li>50 apps (Hosted in 6 locations)</li>
+                                                <li>No Feature Caps</li>
+                                                <li>Minimum 25 users</li>
+                                                <li>Extra Security and Compliance</li>
+                                            </ul>
+                                        </div>
+                                        <a href="#" class="btn btn--base w--100">GET START</a>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6 col-lg-4">
                                     <div class="pricing__card active">
-                                        <span class="badge popular-card">Most Popular</span>
+                                        <div class="pricing__icon"><i class="fa-solid fa-gem"></i></div>
                                         <h4 class="pricing__name">Standard Plan</h4>
-                                        <h3 class="pricing__price">$29.<span>99</span><span>/month</span></h3>
                                         <p class="pricing__desc">Perfect for small teams looking to scale projects
                                             efficiently</p>
+                                        <h3 class="pricing__price">$29.99<span>/month</span></h3>
                                         <ul class="pricing__list">
                                             <li>24/7 Priority Support</li>
                                             <li>Unlimited Workspaces</li>
@@ -236,17 +239,17 @@
                                             <li>Up to 100 users</li>
                                             <li>Enhanced Security Layer</li>
                                         </ul>
-                                        <a href="#" class="btn btn-light--base w--100">GET START</a>
+                                        <a href="#" class="btn btn--base w--100">GET START</a>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6 col-lg-4">
                                     <div class="pricing__card">
-                                        <h4 class="pricing__name">Premium Plan</h4>
-                                        <h3 class="pricing__price">$59.<span>99</span><span>/month</span></h3>
+                                        <div class="pricing__icon"><i class="fa-solid fa-people-pulling"></i></div>
+                                        <h4 class="pricing__name">Team Plan</h4>
                                         <p class="pricing__desc">Best choice for large organizations requiring full
-                                            control
-                                        </p>
+                                            control</p>
+                                        <h3 class="pricing__price">$59.99<span>/month</span></h3>
                                         <ul class="pricing__list">
                                             <li>Dedicated Account Manager</li>
                                             <li>Unlimited Workspaces & Users</li>
@@ -255,7 +258,7 @@
                                             <li>Full API Access</li>
                                             <li>Enterprise-Grade Security</li>
                                         </ul>
-                                        <a href="#" class="btn btn-light--base w--100">GET START</a>
+                                        <a href="#" class="btn btn--base w--100">GET START</a>
                                     </div>
                                 </div>
                             </div>
@@ -265,9 +268,9 @@
                                 <div class="col-md-6 col-lg-4">
                                     <div class="pricing__card">
                                         <h4 class="pricing__name">Free Plan</h4>
-                                        <h3 class="pricing__price">$00.<span>00</span><span>/month</span></h3>
                                         <p class="pricing__desc">Seamless review and approval designed for freelancer
                                         </p>
+                                        <h3 class="pricing__price">$00.<span>00</span><span>/month</span></h3>
                                         <ul class="pricing__list">
                                             <li>24/5 Email, Chat Support</li>
                                             <li>Multiple Workspaces</li>
@@ -355,12 +358,12 @@
                 <div class="footer__inner">
                     <div class="footer__item">
                         <div class="footer__item-inner">
-                            <h5 class="footer__title">Company</h5>
+                            <h5 class="footer__title">Product</h5>
                             <ul class="footer__menu">
-                                <li class="footer__menu-item"><a href="#" class="footer__menu-link">Home</a></li>
-                                <li class="footer__menu-item"><a href="#" class="footer__menu-link">About</a></li>
+                                <li class="footer__menu-item"><a href="#" class="footer__menu-link">Features</a></li>
                                 <li class="footer__menu-item"><a href="#" class="footer__menu-link">Pricing</a></li>
-                                <li class="footer__menu-item"><a href="#" class="footer__menu-link">Blog</a></li>
+                                <li class="footer__menu-item"><a href="#" class="footer__menu-link">Security</a></li>
+                                <li class="footer__menu-item"><a href="#" class="footer__menu-link">Roadmap</a></li>
                             </ul>
                         </div>
                     </div>
@@ -372,16 +375,16 @@
                                  </li>
                                  <li class="footer__menu-item"><a href="register.html" class="footer__menu-link">Terms of services</a>
                                  </li>
-                                 <li class="footer__menu-item"><a href="#" class="footer__menu-link">Subscribe</a>
+                                 <li class="footer__menu-item"><a href="#" class="footer__menu-link">Cookie Policy</a>
                                  </li>
-                                 <li class="footer__menu-item"><a href="#" class="footer__menu-link">Cookies Policy</a></li>
+                                 <li class="footer__menu-item"><a href="#" class="footer__menu-link">GDPR</a></li>
                              </ul>
                          </div>
                     </div>
                     <div class="footer__item footer__newsletter">
                          <div class="footer__item-inner">
-                             <h5 class="footer__title">Newsletter</h5>
-                             <p class="footer__desc">Subscribe to get account listings & deals</p>
+                             <h5 class="footer__title">Subscribe Our Newsletter</h5>
+                             <p class="footer__desc">Get tips, tutorials, and updates on new AI design features.</p>
                              <form action="/" class="footer__form">
                                  <div class="input-group">
                                      <input type="email" class="form-control" name="email"
@@ -401,7 +404,7 @@
         <div class="container">
             <div class="row gy-3">
                 <div class="col-md-12 text-center">
-                    <div class="bottom-footer-text"> &copy; Copyright 2025 . All rights reserved.</div>
+                    <p class="footer__bottom-text"> &copy; Copyright 2025 . All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -416,16 +419,14 @@
 <script src="assets/js/magnific-popup.min.js"></script>
 <!-- Scrollreveal Js -->
 <script src="assets/js/scrollreveal.min.js"></script>
-<!-- bx slider js -->
-<script src="assets/js/jquery.bxslider.min.js"></script>
+<!-- swiper slider js -->
+<script src="assets/js/swiper-bundle.min.js"></script>
 <!-- Odometer Js -->
 <script src="assets/js/odometer.min.js"></script>
 <!-- Select2 Js -->
 <script src="assets/js/select2.min.js"></script>
 <!-- Apexchart js -->
 <script src="assets/js/apexcharts.js"></script>
-<!-- Matter js -->
-<script src="assets/js/matter.min.js"></script>
 <!-- main js -->
 <script src="assets/js/main.js"></script>
 

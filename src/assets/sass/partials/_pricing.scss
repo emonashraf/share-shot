@@ -4,9 +4,10 @@
     z-index: 1;
 
     &__card {
+        position: relative;
         padding-block: clamp(1.25rem, 0.938rem + 1.563vw, 2.5rem);
         padding-inline: clamp(0.938rem, 0.703rem + 1.172vw, 1.875rem);
-        background-color: hsl(var(--white));
+        background-color: hsl(var(--base)/ 0.05);
         border: 1px solid hsl(var(--border-color));
         border-radius: var(--b-radius-20);
         position: relative;
@@ -16,16 +17,51 @@
         z-index: 1;
         backdrop-filter: blur(10px);
         height: 100%;
+        transition: 0.3s;
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: rem(130px);
+            height: rem(130px);
+            background-color: hsl(var(--base)/ 0.2);
+            filter: blur(50px);
+            transition: 0.3s;
+        }
 
         &:hover,
         &.active {
-            border-color: hsl(var(--base-l-700));
-            .btn {
-                background-color: hsl(var(--base)) !important;
-                color: hsl(var(--white)) !important;
-                border-color: hsl(var(--base));
+            background-color: hsl(var(--base-two)/ 0.1);
+            border-color: hsl(var(--base-two)/0.15);
+
+            &::before {
+                background-color: hsl(var(--base-two)/ 0.25);
             }
+
+            .pricing__icon {
+                background-color: hsl(var(--base-two));
+                color: hsl(var(--heading-color));
+            }
+
+            .pricing__list {
+                li {
+                    &::before {
+                        color: hsl(var(--base-two-d-100));
+                    }
+                }
+            }
+
+
+            .btn {
+                background-color: hsl(var(--base-two)) !important;
+                color: hsl(var(--heading-color)) !important;
+                border-color: hsl(var(--base-two)) !important;
+            }
+
         }
+
         .popular-card {
             background-color: hsl(var(--base));
             position: absolute;
@@ -43,20 +79,50 @@
         padding-bottom: clamp(1.25rem, 0.938rem + 1.563vw, 2.5rem);
     }
 
-    &__name {
-        margin-bottom: 4px;
-        font-weight: 500;
+    &__icon {
+        display: grid;
+        place-items: center;
+        border-radius: var(--b-radius-8);
+        width: rem(54px);
+        height: rem(54px);
+        background-color: hsl(var(--base));
+        font-size: rem(30px);
+        color: hsl(var(--white));
+        margin-bottom: clamp(0.625rem, 0.469rem + 0.781vw, 1.25rem);
+        transition: 0.3s;
     }
+
+    &__name {
+        margin-bottom: 8px;
+        font-weight: 500;
+        font-size: clamp(1.5rem, 1.143rem + 0.952vw, 2rem);
+        font-weight: 600;
+    }
+    &__desc {
+       margin-bottom: 20px;
+    }
+
     &__price {
-        font-size: clamp(1.75rem, 1.438rem + 1.563vw, 3rem);
-        margin-bottom: clamp(0.938rem, 0.703rem + 1.172vw, 1.875rem);
+        margin-bottom: 15px;
+        background-color: hsl(var(--white));
+        color: hsl(var(--base));
+        border: 1px solid hsl(var(--base)/ 0.10);
+        padding: rem(12px);
+        border-radius: var(--b-radius-12);
+        text-align: center;
 
         span {
             font-size: rem(16px);
             font-weight: 400;
         }
     }
+
     &__list {
+        background-color: hsl(var(--white));
+        border: 1px solid hsl(var(--base)/ 0.1);
+        padding: 20px;
+        border-radius: var(--b-radius-12);
+
         margin-top: clamp(1.25rem, 1.063rem + 0.938vw, 2rem);
         display: flex;
         flex-direction: column;
@@ -64,25 +130,27 @@
 
         li {
             position: relative;
-            padding-left: 25px;
+            padding-left: 20px;
 
 
             &::before {
                 position: absolute;
                 left: 3px;
-                top: 4px;
-                content: "\f00c";
+                top: 8px;
+                content: "\f111";
                 font-family: "font Awesome 6 Free";
-                font-size: 14px;
+                font-size: 6px;
                 font-weight: 900;
                 margin-right: 8px;
                 color: hsl(var(--base));
+
             }
 
         }
     }
-    .btn{
-         margin-top: clamp(0.938rem, 0.703rem + 1.172vw, 1.875rem);
+
+    .btn {
+        margin-top: clamp(0.938rem, 0.703rem + 1.172vw, 1.875rem);
     }
 }
 

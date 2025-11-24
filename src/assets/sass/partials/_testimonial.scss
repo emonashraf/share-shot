@@ -1,32 +1,70 @@
 /* ======================  Testimonial Start  ======================*/
 .testimonial {
   position: relative;
-  margin-inline: auto;
   --icon-size: clamp(2.188rem, 2.031rem + 0.781vw, 2.813rem);
 
+  &__inner {
+    position: relative;
+  }
+
+  .swiper-slide {
+    &:nth-child(even) {
+      .testimonial__card {
+        background-color: hsl(var(--base-two)/0.2);
+        &:hover{
+           border: 1px solid hsl(var(--base-two));
+        }
+      }
+      .testimonial__body{
+        &::before {
+          background-color: hsl(var(--base-two)/0.2);
+        }
+      }
+    }
+  }
+
   &__card {
-    transition: 0.3s;
-    height: 100%;
     width: 100%;
-    border-radius: var(--b-radius-12);
-    overflow: hidden;
-    max-width: rem(420px);
-    margin-inline: auto;
+    height: 100%;
+    border-radius: var(--b-radius-16);
     background-color: hsl(var(--white));
-    border: 1px solid hsl(var(--border-color));
+    border: 1px solid hsl(var(--base)/ 0.07);
     padding: clamp(0.75rem, 0.547rem + 1.016vw, 1.563rem);
+    transition: 0.3s;
+    background-color: hsl(var(--base)/ 0.08);
     transition: 0.3s;
 
     &:hover {
-      border: 1px solid hsl(var(--base)/0.2);
-      box-shadow:  var(--box-shadow);
+      border: 1px solid hsl(var(--base));
+      box-shadow: var(--box-shadow);
     }
   }
 
   &__body {
+    position: relative;
     width: 100%;
     transition: 0.3s;
+    padding: rem(24px);
+    border-radius: var(--b-radius-12);
     z-index: 2;
+    background: hsl(var(--white));
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 24px;
+      bottom: 24px;
+      background-color: hsl(var(--base)/0.2);
+      mask-image: url('../images/testimonial/arrow.png');
+      mask-size: 100% 100%;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      width: 44px;
+      height: 44px;
+      z-index: -1;
+
+    }
+
   }
 
   &__top {
@@ -58,7 +96,7 @@
 
   &__desc {
     font-size: 18px;
-    margin-top: clamp(0.625rem, 0.531rem + 0.469vw, 1rem);
+    margin-bottom: clamp(0.625rem, 0.531rem + 0.469vw, 1rem);
   }
 }
 

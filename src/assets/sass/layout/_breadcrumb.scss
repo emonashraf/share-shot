@@ -6,16 +6,20 @@
   position: relative;
   z-index: 1;
   background-color: hsl(var(--base-l-900)/0.3);
-  
-  &__pattern {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    background-image:
-      linear-gradient(to right, hsl(var(--black)/ 0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, hsl(var(--black)/ 0.04) 1px, transparent 1px);
-    background-size: clamp(2.188rem, 1.641rem + 2.734vw, 4.375rem) clamp(2.188rem, 1.641rem + 2.734vw, 4.375rem);
-    mask-image: radial-gradient(ellipse 40% 80% at 50% 0%, hsl(var(--black)) 60%, transparent 100%);
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    @include glove--base;
+    left: -5%;
+    bottom: -40%;
+  }
+
+  &::after {
+    content: '';
+    @include glove--base-two;
+    right: -5%;
+    bottom: -40%;
   }
 
   &__wrapper {

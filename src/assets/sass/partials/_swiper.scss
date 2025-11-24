@@ -1,8 +1,8 @@
 /* ================================= Swiper Css Start =========================== */
 .swiper-pagination {
     position: relative;
-
 }
+
 .swiper-pagination {
     position: relative;
     display: flex;
@@ -35,8 +35,9 @@
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  border: 1px solid hsl(var(--base));
-  color: hsl(var(--base));
+  background-color: hsl(var(--base));
+  border: 1px solid hsl(var(--border-color) / 0.12);
+  color: hsl(var(--white));
   width: 40px;
   height: 40px;
   display: grid;
@@ -45,11 +46,8 @@
   cursor: pointer;
   user-select: none;
   transition: all 0.3s;
-  background-color: transparent;
   &:hover{
-    color: hsl(var(--base-two-d-300));
-    border: 1px solid hsl(var(--base-two-d-300));
-    
+    background-color: hsl(var(--base-d-200)) !important;
   }
   @include sm-screen{
     display: none;
@@ -67,9 +65,11 @@
     right: -20px;
   }
 }
+.custom-btn:hover {
+  background-color: hsl(var(--base));
+}
 .custom-btn.swiper-button-disabled{
-    border: 1px solid hsl(var(--base)/ 0.2);
-    color: hsl(var(--base-l-500));
-
+    background-color: hsl(var(--base) / 0.2) !important;
+    backdrop-filter: blur(2px);
 }
 /* ================================= Swiper Css End =========================== */
