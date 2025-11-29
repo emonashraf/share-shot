@@ -47,34 +47,100 @@
 
 <!--==========================  Dashboard Section Start  ==========================-->
 <div class="dashboard">
-     <!--==========================   User-header Start  ==========================-->
+  <!--==========================   User-sidebar Start  ==========================-->
+<div class="dashboard__sidebar">
+  <div class="sidebar__close"><i class="las la-times"></i></div>
+  <div class="dashboard__logo">
+    <a href="index.html"><img src="assets/images/logo/white-logo.png" alt="logo"></a>
+  </div>
+  <div class="dashboard__menu">
+    <ul>
+      <li><a href="user-dashboard.html" class="active"><i class="fa-solid fa-table-columns"></i>Dashboard</a></li>
+      <li><a href="user-upload-file.html"><i class="fa-solid fa-cloud-arrow-up"></i>Upload File</a></li>
+      <li><a href="user-active-links.html"><i class="fa-regular fa-circle-check"></i>Active Links</a></li>
+      <li><a href="user-analytics.html"><i class="fa-solid fa-chart-simple"></i>Analytics</a></li>
+      <li><a href="user-withdraw.html"><i class="fa-solid fa-coins"></i> Withdraw</a></li>
+      <li><a href="user-deposit.html"><i class="fa-solid fa-money-bill-transfer"></i> Deposit</a></li>
+      <li><a href="user-transactions.html"><i class="fa-solid fa-list-ul"></i> Transactions</a></li>
+      <li><a href="user-support-tickets.html"><i class="fa-solid fa-headset"></i> Support Ticket</a></li>
+    </ul>
+  </div>
+</div>
+<!--==========================  User-sidebar End  ==========================-->
+  <div class="dashboard__wrap">
+    <!--==========================   User-header Start  ==========================-->
 <div class="dashboard__header">
-  <div class="container">
-    <div class="dashboard__header-inner">
-      <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Back</a>
-      <a href="index.html" class="logo">
-        <img src="assets/images/logo/logo.png" alt="logo">
-      </a>
-      <div class="dropdown">
-        <button class="dropdown-toggle d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown"
-          aria-expanded="false">
-          <span class="profile__dropdown">
-            <span>Profile</span>
+  <div class="input-group search__box">
+    <input type="text" class="form-control form-control-sm" placeholder="Search">
+    <button class="btn btn--sm" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+  </div>
+  <div class="dashboard__header__widgets">
+    <div class="upload__file">
+      <a href="user-upload-file.html" class="btn btn--base btn--sm"><i class="fa-solid fa-cloud-arrow-up"></i> <span class="d-none d-xl-block">Upload File</span></a>
+    </div>
+    <div class="dropdown">
+      <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <span class="notification__btn">
+          <i class="las la-bell"></i>
+          <span class="notification__count">
+            <span>21</span>
           </span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="user-profile-setting.html">Profile Setting</a></li>
-          <li><a class="dropdown-item" href="user-change-password.html">Change Password</a></li>
-          <li><a class="dropdown-item" href="two-factor.html">2FA Security</a></li>
-          <li><a class="dropdown-item" href="index.html">Logout</a></li>
-        </ul>
+        </span>
+      </button>
+      <div class="dropdown-menu">
+        <div class="notification__wrap">
+          <div class="notification__header">
+            <h4>Notifications</h4>
+            <span class="badge badge--base">12 Unread</span>
+          </div>
+          <div class="notification__body">
+            <a href="#">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <span>26 minutes ago</span>
+            </a>
+            <a href="#">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <span>26 minutes ago</span>
+            </a>
+            <a href="#">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <span>26 minutes ago</span>
+            </a>
+            <a href="#">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <span>26 minutes ago</span>
+            </a>
+            <a href="#">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <span>26 minutes ago</span>
+            </a>
+          </div>
+          <div class="notification__footer">
+            <a href="#" class="btn btn--sm btn--base w-100">View all</a>
+          </div>
+        </div>
       </div>
     </div>
+    <div class="dropdown">
+      <button class="dropdown-toggle d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <span class="profile__dropdown">
+          <img src="assets/images/user.jpg" alt="image">
+          <span>Max Sujak</span>
+        </span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="user-profile-setting.html">Profile Setting</a></li>
+        <li><a class="dropdown-item" href="user-change-password.html">Change Password</a></li>
+        <li><a class="dropdown-item" href="two-factor.html">2FA Security</a></li>
+        <li><a class="dropdown-item" href="index.html">Logout</a></li>
+      </ul>
+    </div>
+    <span class="sidebar__open"><i class="fa-solid fa-bars"></i></span>
   </div>
 </div>
 <!--==========================  User-header End  ==========================-->
-  <div class="container">
-    <div class="dashboard__wrap">
+    <div class="dashboard__wrapper">
       <div class="profile-setting">
         <div class="row gy-4">
           <div class="col-xl-5">
@@ -93,7 +159,7 @@
                     .jpeg,.png</strong>Image will be resized into
                   <strong>116x116px</strong>
                 </p>
-  
+
                 <div class="profile-setting__content">
                   <ul class="profile-setting__info-list">
                     <li class="profile-setting__info">
@@ -117,9 +183,9 @@
                       <span>United States</span>
                     </li>
                   </ul>
-  
+
                 </div>
-  
+
               </div>
             </div>
           </div>

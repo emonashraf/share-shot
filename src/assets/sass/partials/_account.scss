@@ -3,48 +3,81 @@
   position: relative;
   overflow: hidden;
   min-height: 100vh;
-  z-index: 2;
 
-  &::before {
-    background-image: radial-gradient(125% 125% at 50% 90%, hsl(var(--white)) 35%, hsl(var(--base)/ 0.5) 100%);
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
+  &__inner {
+    border-radius: var(--b-radius-12);
+    background-color: hsl(var(--base)/0.07);
+    border: 1px solid hsl(var(--base)/ 0.08);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    height: 100%;
+  }
+  &__thumb {
+    height: 100%;
+
+    @include md-screen {
+      aspect-ratio: 3 / 1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      vertical-align: center;
+    }
   }
 
-  &__subtitle {
-    letter-spacing: 5px;
-    margin-bottom: clamp(0.5rem, 0.375rem + 0.625vw, 1rem);
+  &__social-log {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .btn {
+      flex: 1 0 200px;
+      border-color: var(--common-b-color) !important;
+    }
   }
 
   &__title {
-    margin-bottom: clamp(0.75rem, 0.563rem + 0.938vw, 1.5rem);
+    margin-bottom: clamp(0.5rem, 0.469rem + 0.156vw, 0.625rem);
   }
 
-  &__form-wrap {
-    max-width: 550px;
-    margin-inline: auto;
-    text-align: center;
-
-    .logo {
-      margin-bottom: clamp(1.25rem, 0.781rem + 2.344vw, 3.125rem);
-    }
-  }
+ 
 
   &__form {
     position: relative;
     padding-block: clamp(1.875rem, 1.406rem + 2.344vw, 3.75rem);
     padding-inline: clamp(0.938rem, 0.703rem + 1.172vw, 1.875rem);
-    border-radius: var(--b-radius-12);
-    background: hsl(var(--white));
-    border: 1px solid hsl(var(--white)/ 0.08);
-    box-shadow: var(--box-shadow);
+    text-align: center;
+
+
     z-index: 3;
+    height: 100%;
+    border-radius: 0 !important;
   }
 
   &__or {
-    margin-top: 8px;
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 45%;
+      height: 1px;
+      background: var(--common-b-color);
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
   }
 
   .social-list {

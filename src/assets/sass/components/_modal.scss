@@ -1,10 +1,13 @@
 /* ================================= Modal Css Start =========================== */
 .modal {
   &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid hsl(var(--black) / 0.06);
     padding: 15px;
 
-    .close {
+    .close-btn {
       width: 28px;
       height: 28px;
       background-color: hsl(var(--black) / 0.1);
@@ -15,8 +18,13 @@
       align-items: center;
       justify-content: center;
       transition: .3s;
+      i{
+
+        font-size: 20px;
+      }
 
       &:hover {
+        background-color: hsl(var(--danger));
         color: hsl(var(--white));
       }
     }

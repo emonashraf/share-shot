@@ -188,7 +188,7 @@
   // ========================= Odometer Js End ===================
 
   // ========================= Magnific Popup Js Start ===================
-  $('.promo__video__play').magnificPopup({
+  $('.popup-video').magnificPopup({
     type: 'iframe',
   });
   // ========================= Magnific Popup Js End ===================
@@ -246,6 +246,35 @@
       }
     });
   });
+  
+
+// File change → show preview in upload-file-view
+$('#fileInput').on('change', function () {
+    let file = this.files[0];
+    showPreview(file);
+});
+
+function showPreview(file) {
+    let previewBox = $('.upload-file-view .upload-file__item');
+    previewBox.html(''); // remove old preview
+
+    if (!file) return;
+
+    let reader = new FileReader();
+    reader.onload = function (e) {
+
+        // If image file
+        if (file.type.startsWith('image/')) {
+            previewBox.html(`<img src="${e.target.result}" alt="preview">`);
+        }
+
+        // If video file (optional)
+        else if (file.type.startsWith('video/')) {
+            previewBox.html(`<video src="${e.target.result}" controls></video>`);
+        }
+    };
+    reader.readAsDataURL(file);
+}
 
 
   // ========================= Scroll Reveal Js Start ===================
@@ -261,30 +290,125 @@
     interval: 100,
     origin: 'bottom',
   })
-  sr.reveal('.section-heading__desc, .choose-us__card, .blog__card', {
+  sr.reveal('.banner__desc, .banner__btns .btn, .banner__info-item, .section-heading__desc, .features__card, .blog__card', {
     delay: 100,
     interval: 200,
     origin: 'bottom',
   })
-  sr.reveal('.right-reveal, .banner__desc, .banner__info-item:nth-child(2)', {
+  sr.reveal('.right-reveal, .promo-video__desc', {
     delay: 60,
     origin: 'right',
     interval: 200,
   })
-  sr.reveal('.left-reveal, .banner__title, .banner__info-item:nth-child(1)', {
+  sr.reveal('.left-reveal, .promo-video__title', {
     delay: 60,
     interval: 200,
     origin: 'left',
   })
-  sr.reveal('.banner__subtitle, .section-heading__name, .work-process__card', {
+  sr.reveal('.banner__title, .banner__subtitle, .section-heading__name, .work-process__card', {
     delay: 60,
     origin: 'top',
     interval: 150,
   })
-
-
   // ========================= Scroll Reveal Js End ===================
+// ========================= Custom Dropzone Start =====================
+    function updatePreview(input, file) {
+      var $dropzone = $(input).closest('.custom-dropzone');
+      var $preview = $dropzone.find('.dropzone-filed__preview');
+      var $closeBtn = $dropzone.find('.dropzone-filed__close');
 
+      $preview.html('').removeClass('active');
+      $closeBtn.hide();
+
+      if (file) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+          var content;
+          if (file.type.startsWith('image/')) {
+            var img = document.createElement('img');
+            img.src = e.target.result;
+            content = img;
+          } else if (file.type.startsWith('video/')) {
+            var video = document.createElement('video');
+            video.src = e.target.result;
+            video.controls = true;
+            content = video;
+          }
+
+          $preview.html(content).addClass('active');
+          $closeBtn.show();
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+    $('.custom-dropzone input[type="file"]').on('change', function () {
+      updatePreview(this, this.files[0]);
+    });
+    $('.custom-dropzone').on('click', '.dropzone-filed__close', function () {
+      var $dropzone = $(this).closest('.custom-dropzone');
+      $dropzone.find('.dropzone-filed__preview').html('').removeClass('active');
+      $dropzone.find('input[type="file"]').val('');
+      $dropzone.find('input[type="file"].required').prop('required', true);
+      $(this).hide();
+    });
+    $('.dropzone-filed__preview').each(function () {
+      if (!$(this).hasClass('active')) {
+        $(this).closest('.custom-dropzone').find('.dropzone-filed__close').hide();
+      }
+    });
+    $('.dropzone-filed').on('dragover dragleave drop', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+
+      var $dropzone = $(this).closest('.custom-dropzone');
+      var $fileInput = $dropzone.find('input[type="file"]');
+
+      if (e.type === 'dragover') {
+        $(this).addClass('dragging');
+      } else if (e.type === 'dragleave' || e.type === 'drop') {
+        $(this).removeClass('dragging');
+      }
+
+      if (e.type === 'drop') {
+        var files = Array.from(e.originalEvent.dataTransfer.files);
+        var accept = $fileInput.attr('accept');
+        var acceptedTypes = accept ? accept.split(',').map(type => type.trim()) : [];
+
+        var invalidFiles = files.filter(file => {
+          var fileType = file.type;
+          var fileName = file.name.toLowerCase();
+          return !acceptedTypes.some(type => {
+            return (type.startsWith('.') && fileName.endsWith(type)) || fileType === type;
+          });
+        });
+
+        if (invalidFiles.length > 0) {
+          alert('Some files are not allowed. Please check the accepted file types.');
+          return;
+        }
+
+        if (!$fileInput.prop('multiple') && files.length > 1) {
+          alert('This input only allows one file.');
+          return;
+        }
+
+        var dt = new DataTransfer();
+        files.forEach(function (file) {
+          dt.items.add(file);
+        });
+        $fileInput[0].files = dt.files;
+        $fileInput.trigger('change');
+      }
+    });
+    $('.custom-dropzone input').each(function () {
+      if ($(this).prop('required')) {
+        $(this).addClass('required');
+      }
+      if ($(this).closest('.custom-dropzone').find('.dropzone-filed__preview').hasClass('active')) {
+        $(this).prop('required', false);
+      }
+    });
+    // ========================= Custom Dropzone End ==========
   // ========================== Table Data Label Js Start =====================
   if ($('th').length) {
     Array.from(document.querySelectorAll('table')).forEach(table => {

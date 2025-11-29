@@ -58,8 +58,7 @@ label.required:after {
   }
 
   &:focus {
-    background-color: hsl(var(--white)/ 0.04);
-    border-color: hsl(var(--base));
+    border-color: hsl(var(--base)/ 0.5);
     box-shadow: none;
   }
 
@@ -101,7 +100,6 @@ label.required:after {
 
   &-sm {
     padding: var(--common-p-sm) !important;
-    font-size: rem(14px);
   }
 }
 
@@ -125,8 +123,8 @@ input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-  -webkit-text-fill-color: hsl(var(--white)) !important;
-  caret-color: hsl(var(--white));
+  -webkit-text-fill-color: hsl(var(--body-color)) !important;
+  caret-color: hsl(var(--body-color));
 }
 
 /* Autofill Css End */
@@ -154,7 +152,7 @@ select:-webkit-autofill {
   cursor: pointer;
   top: 50%;
   transform: translateY(-50%);
-  color: hsl(var(--white)/0.6);
+  color: hsl(var(--body-color));
 }
 
 .password-show-hide .open-eye-icon {
@@ -356,7 +354,7 @@ input[type='number'] {
 .input-group {
   border-radius: var(--common-radius) !important;
   border: 1px solid var(--common-b-color);
-  background-color: hsl(var(--white)/ 0.04);
+  background-color: hsl(var(--white));
   transition: 0.1s;
   backdrop-filter: blur(10px);
 
@@ -385,6 +383,8 @@ input[type='number'] {
     padding-inline: 14px;
     border-radius: calc(var(--common-radius) - 2px);
     color: hsl(var(--body-color)) !important;
+    border: none !important;
+    padding-left: 0 !important;
     &:focus {
       border: none !important;
     }

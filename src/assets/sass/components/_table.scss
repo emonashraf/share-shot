@@ -71,8 +71,8 @@
       th {
         text-align: center;
         padding: 16px;
-        color: hsl(var(--white));
-        background-color: hsl(var(--base));
+        color: hsl(var(--heading-color));
+        background-color: hsl(var(--base)/ 0.1);
         font-family: var(--heading-font);
         font-weight: 500;
         border-bottom: 0;
@@ -103,17 +103,23 @@
     background-color: hsl(var(--white)/ 0.04);
 
     tr {
+      &:last-child {
+        td {
+          border: none;
+          padding-bottom: 0;
+        }
+      }
+
       td {
         text-align: center;
         vertical-align: middle;
         padding: 16px;
         font-family: var(--heading-font);
         color: hsl(var(--body-color));
-        font-weight: 500;
         max-width: 170px;
         font-size: 16px;
-        border: none;
-        background-color: hsl(var(--black) / 0.03);
+        background-color: transparent;
+        border-bottom: 1px solid hsl(var(--border-color));
 
         @include lg-screen {
           font-size: 14px;
@@ -133,12 +139,11 @@
 
         &:first-child {
           text-align: left;
-          border-radius: 8px 0 0 8px;
+
         }
 
         &:last-child {
           text-align: right;
-          border-radius: 0 8px 8px 0;
         }
       }
     }
@@ -160,8 +165,14 @@
         display: block;
         margin-bottom: 5px;
 
-        &:last-child td {
-          border-bottom: 0;
+        &:last-child {
+          td {
+            &:not(:last-child) {
+              border-bottom: 1px solid hsl(var(--border-color)) !important;
+            }
+
+            padding: 16px;
+          }
         }
 
         td {
@@ -171,7 +182,6 @@
           gap: 15px;
           text-align: right;
           padding: 10px 15px;
-          border: none;
           border-bottom: 1px solid hsl(var(--black) / 0.8);
           max-width: unset;
 
@@ -189,18 +199,8 @@
           &::before {
             display: block;
             font-size: 14px;
-            color: hsl(var(--white) / 0.8);
+            color: hsl(var(--body-color));
           }
-        }
-      }
-    }
-  }
-
-  @include sm-screen {
-    tbody {
-      tr {
-        td {
-          border: 0;
         }
       }
     }
@@ -222,8 +222,19 @@
         display: block;
         margin-bottom: 5px;
 
-        &:nth-child(even) {
-          background-color: hsl(var(--white) / 0.04);
+        &:last-child {
+          td {
+            &:not(:last-child) {
+              border-bottom: 1px solid hsl(var(--border-color)) !important;
+            }
+
+            padding: 16px;
+          }
+        }
+
+
+        &:nth-child(odd) {
+          background-color: hsl(var(--base) / 0.04);
         }
 
         &:last-child td {
@@ -237,8 +248,7 @@
           gap: 15px;
           text-align: right;
           padding: 10px 15px;
-          border: none;
-         border-bottom: 1px solid hsl(var(--white) / 0.1);
+          border-bottom: 1px solid hsl(var(--border-color));
           max-width: unset;
 
           &:last-child {
@@ -255,18 +265,8 @@
           &::before {
             display: block;
             font-size: 14px;
-          color: hsl(var(--white) / 0.8);
+            color: hsl(var(--body-color));
           }
-        }
-      }
-    }
-  }
-
-  @include md-screen {
-    tbody {
-      tr {
-        td {
-          border: none;
         }
       }
     }
@@ -288,8 +288,18 @@
         display: block;
         margin-bottom: 5px;
 
-        &:nth-child(even) {
-          background-color: hsl(var(--white) / 0.04);
+        &:last-child {
+          td {
+            &:not(:last-child) {
+              border-bottom: 1px solid hsl(var(--border-color)) !important;
+            }
+
+            padding: 16px;
+          }
+        }
+
+        &:nth-child(odd) {
+          background-color: hsl(var(--base) / 0.04);
         }
 
         td {
@@ -299,8 +309,7 @@
           gap: 15px;
           text-align: right;
           padding: 10px 15px;
-          border: none;
-          border-bottom: 1px solid hsl(var(--white) / 0.1);
+          border-bottom: 1px solid hsl(var(--border-color));
           max-width: unset;
 
           &:last-child {
@@ -317,18 +326,8 @@
           &::before {
             display: block;
             font-size: 14px;
-          color: hsl(var(--white) / 0.8);
+            color: hsl(var(--body-color));
           }
-        }
-      }
-    }
-  }
-
-  @include lg-screen {
-    tbody {
-      tr {
-        td {
-          border: 0;
         }
       }
     }
@@ -349,9 +348,13 @@
       tr {
         display: block;
         margin-bottom: 5px;
-
-        &:last-child td {
-          border-bottom: 0;
+         &:last-child {
+          td {
+            &:not(:last-child){
+              border-bottom: 1px solid hsl(var(--border-color)) !important;
+            }
+            padding: 16px;
+          }
         }
 
         td {
@@ -361,8 +364,7 @@
           gap: 15px;
           text-align: right;
           padding: 10px 15px;
-          border: none;
-         border-bottom: 1px solid hsl(var(--white) / 0.1);
+          border-bottom: 1px solid hsl(var(--border-color));
           max-width: unset;
 
           &:last-child {
@@ -379,18 +381,8 @@
           &::before {
             display: block;
             font-size: 14px;
-          color: hsl(var(--white) / 0.8);
+            color: hsl(var(--body-color));
           }
-        }
-      }
-    }
-  }
-
-  @include xl-screen {
-    tbody {
-      tr {
-        td {
-          border: 0;
         }
       }
     }

@@ -5,19 +5,22 @@
 
     &__card {
         position: relative;
-        padding-block: clamp(1.25rem, 0.938rem + 1.563vw, 2.5rem);
-        padding-inline: clamp(0.938rem, 0.703rem + 1.172vw, 1.875rem);
+        padding-block: clamp(1.25rem, 1.188rem + 0.313vw, 1.5rem);
+        padding-inline: clamp(0.875rem, 0.719rem + 0.781vw, 1.5rem);
         background-color: hsl(var(--base)/ 0.05);
         border: 1px solid hsl(var(--border-color));
         border-radius: var(--b-radius-20);
         position: relative;
         overflow: hidden;
-        max-width: rem(420px);
+        max-width: rem(400px);
         margin-inline: auto;
         z-index: 1;
         backdrop-filter: blur(10px);
         height: 100%;
         transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         &::before {
             content: '';
@@ -61,23 +64,8 @@
             }
 
         }
-
-        .popular-card {
-            background-color: hsl(var(--base));
-            position: absolute;
-            top: 0;
-            right: 0;
-            border-radius: 0 var(--b-radius-12) 0 var(--b-radius-12);
-            color: hsl(var(--white));
-            font-weight: 700;
-        }
     }
 
-    &__top {
-        border-bottom: 1px solid hsl(var(--white)/ 0.13);
-        margin-bottom: clamp(1.25rem, 0.938rem + 1.563vw, 2.5rem);
-        padding-bottom: clamp(1.25rem, 0.938rem + 1.563vw, 2.5rem);
-    }
 
     &__icon {
         display: grid;
@@ -98,19 +86,18 @@
         font-size: clamp(1.5rem, 1.143rem + 0.952vw, 2rem);
         font-weight: 600;
     }
+
     &__desc {
-       margin-bottom: 20px;
+        margin-bottom: clamp(0.625rem, 0.469rem + 0.781vw, 1.25rem);
     }
 
     &__price {
-        margin-bottom: 15px;
         background-color: hsl(var(--white));
         color: hsl(var(--base));
         border: 1px solid hsl(var(--base)/ 0.10);
         padding: rem(12px);
         border-radius: var(--b-radius-12);
         text-align: center;
-
         span {
             font-size: rem(16px);
             font-weight: 400;
@@ -120,10 +107,9 @@
     &__list {
         background-color: hsl(var(--white));
         border: 1px solid hsl(var(--base)/ 0.1);
-        padding: 20px;
+        padding: clamp(0.625rem, 0.469rem + 0.781vw, 1.25rem);
         border-radius: var(--b-radius-12);
-
-        margin-top: clamp(1.25rem, 1.063rem + 0.938vw, 2rem);
+        margin-top: clamp(0.75rem, 0.563rem + 0.938vw, 1.5rem);
         display: flex;
         flex-direction: column;
         gap: clamp(0.75rem, 0.563rem + 0.938vw, 1.5rem);

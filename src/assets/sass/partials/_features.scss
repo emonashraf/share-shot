@@ -36,8 +36,8 @@
     }
 
     &__icon {
-        width: rem(60px);
-        height: rem(60px);
+        width: clamp(2.5rem, 2.188rem + 1.563vw, 3.75rem);
+        height: clamp(2.5rem, 2.188rem + 1.563vw, 3.75rem);
         border-radius: var(--b-radius-12);
         background-color: hsl(var(--base));
         display: grid;
@@ -45,7 +45,7 @@
         margin-bottom: clamp(0.5rem, 0.375rem + 0.625vw, 1rem);
 
         img {
-            max-width: rem(35px);
+            max-width: 70%;
         }
     }
 

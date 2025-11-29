@@ -5,11 +5,18 @@
   overflow: hidden;
 
   &::before {
-    background-image: radial-gradient(125% 125% at 50% 90%, hsl(var(--white)) 35%, hsl(var(--base)/ 0.5) 100%);
     content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -1;
+    @include glove--base;
+    left: -5%;
+    top: -5%;
+
+  }
+
+  &::after {
+    content: '';
+    @include glove--base-two;
+    right: -5%;
+    bottom: -5%;
   }
 
   &__main {

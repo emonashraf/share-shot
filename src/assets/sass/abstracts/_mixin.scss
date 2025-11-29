@@ -79,10 +79,10 @@
 /* ======================  Glove Effect Start  ======================*/
 @mixin glove {
   position: absolute;
-  width: 415px;
-  height: 415px;
+  width: clamp(15.625rem, 13.047rem + 12.891vw, 25.938rem);
+  height: clamp(15.625rem, 13.047rem + 12.891vw, 25.938rem);
   border-radius: 50%;
-  filter: blur(130px);
+  filter: blur(clamp(5.625rem, 5rem + 3.125vw, 8.125rem));
   z-index: -1;
 }
 

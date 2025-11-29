@@ -1,11 +1,10 @@
 /* ================================= Card Css Start =========================== */
 .card {
-    padding: 24px;
+    padding: clamp(1.25rem, 1.188rem + 0.313vw, 1.5rem) clamp(0.75rem, 0.563rem + 0.938vw, 1.5rem);
     border-radius: 8px;
-    background-color: hsl(var(--white));
-    border: 1px solid hsl(var(--border-color));
+    background-color: hsl(var(--base)/ 0.03);
+    border: 1px solid hsl(var(--base)/ 0.06);
     color: hsl(var(--body-color));
-    height: 100%;
 
     @include lg-screen {
         padding: 16px;

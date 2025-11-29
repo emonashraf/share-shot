@@ -4,19 +4,20 @@
   margin-top: auto;
   z-index: 2;
   overflow: hidden;
-  &::before {
-        content: '';
-        @include glove--base;
-        left: -10%;
-        bottom: -30%;
-    }
 
-    &::after {
-        content: '';
-        @include glove--base-two;
-        right: -10%;
-        bottom: -30%;
-    }
+  &::before {
+    content: '';
+    @include glove--base;
+    left: -10%;
+    bottom: -30%;
+  }
+
+  &::after {
+    content: '';
+    @include glove--base-two;
+    right: -10%;
+    bottom: -30%;
+  }
 
   &__bg_top {
     position: absolute;
@@ -73,7 +74,7 @@
     .social-list {
       margin-top: 30px;
 
-     
+
       @include md-screen {
         margin-top: 20px;
       }
@@ -133,8 +134,9 @@
       color: hsl(var(--base));
       font-size: 8px;
     }
-    &:nth-child(even){
-      &::before{
+
+    &:nth-child(even) {
+      &::before {
         color: hsl(var(--base-two));
       }
     }
@@ -142,6 +144,7 @@
     &:last-child {
       padding-bottom: 0;
     }
+
     &:hover {
       color: hsl(var(--base-l-300));
     }
@@ -152,7 +155,8 @@
     display: flex;
     align-items: center;
     gap: rem(12px);
-    font-size: clamp(0.75rem, 0.719rem + 0.156vw, 0.875rem);
+    font-size: clamp(0.875rem, 0.844rem + 0.156vw, 1rem);
+
     i {
       color: hsl(var(--base));
       font-size: rem(6px);
@@ -168,17 +172,25 @@
 
   &__form {
     position: relative;
+
     .input-group {
-     background-color: hsl(var(--base)/0.05);
-     border: 1px solid hsl(var(--base)/0.07);
-     
+      background-color: hsl(var(--base)/0.05);
+      border: 1px solid hsl(var(--base)/0.07);
+
+
+
     }
+
     .form-control {
       padding-right: 10px;
+      
+
       ~button {
-        background-color: hsl(var(--base-two)) !important;;
+        background-color: hsl(var(--base-two)) !important;
+        padding: var(--common-p-sm) !important;
         z-index: 1;
         border: none !important;
+
         i {
           color: hsl(var(--black));
           transition: 0.3s;
@@ -200,7 +212,8 @@
   &__bottom {
     padding: clamp(0.625rem, 0.406rem + 1.094vw, 1.5rem);
     border-top: 1px solid hsl(var(--black)/ 0.06);
-    &-text{
+
+    &-text {
       font-weight: 500;
     }
   }

@@ -43,87 +43,306 @@
   <!--==========================  Overlay Start  ==========================-->
   <div class="overlay"></div>
   <!--==========================  Overlay End  ==========================-->
+<!-- ==================== Header Start Here ==================== -->
+<header class="header__area">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="header__main">
+          <a href="index.html" class="logo"><img src="assets/images/logo/logo.png" alt="logo"></a>
+          <div class="header__menu">
+            <ul>
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="testimonial.html">Testimonial</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="header__widgets">
+            <div class="dropdown">
+              <div class="dropdown">
+                <div role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <div class="language__item">
+                    <img src="assets/images/english.png" alt="image">
+                    <p>English</p>
+                  </div>
+                </div>
+                <ul class="dropdown-menu">
+                  <li>
+                    <div class="language__item dropdown-item">
+                      <img src="assets/images/english.png" alt="image">
+                      <p>English</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="language__item dropdown-item">
+                      <img src="assets/images/bangla.png" alt="image">
+                      <p>Bangla</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="language__item dropdown-item">
+                      <img src="assets/images/hindi.png" alt="image">
+                      <p>Hindi</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+            <div class="header__login">
+              <!-- <a href="login.html"><i class="fa-regular fa-user"></i> Log in</a> -->
+              <a href="user-dashboard.html">Dashboard</a>
+            </div>
+          </div>
+          <span class="menu__open"><i class="fa-solid fa-bars"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- ==================== Header End Here ==================== -->
+
+<!--==========================  Offcanvas Section Start  ==========================-->
+<div class="offcanvas__area">
+  <div class="offcanvas__topbar">
+    <a href="index.html" class="logo"><img src="assets/images/logo/logo.png" alt="logo"></a>
+    <span class="menu__close"><i class="las la-times"></i></span>
+  </div>
+  <div class="offcanvas__main">
+    <div class="offcanvas__widgets">
+      <div class="offcanvas__language">
+        <div class="dropdown">
+          <div role="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="language__item">
+              <img src="assets/images/english.png" alt="image">
+              <p>English</p>
+            </div>
+          </div>
+          <ul class="dropdown-menu">
+            <li>
+              <div class="language__item dropdown-item">
+                <img src="assets/images/english.png" alt="image">
+                <p>English</p>
+              </div>
+            </li>
+            <li>
+              <div class="language__item dropdown-item">
+                <img src="assets/images/bangla.png" alt="image">
+                <p>Bangla</p>
+              </div>
+            </li>
+            <li>
+              <div class="language__item dropdown-item">
+                <img src="assets/images/hindi.png" alt="image">
+                <p>Hindi</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="offcanvas__login">
+        <!-- <a href="#" class="btn btn--base">Sign in</a> -->
+        <a href="user-dashboard.html">Dashboard</a>
+      </div>
+    </div>
+    <div class="offcanvas__menu">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="testimonial.html">Testimonial</a></li>
+        <li><a href="pricing.html">pricing</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!--==========================  Offcanvas Section End  ==========================-->
 <main>
+  <!-- ==================== Breadcrumb Start Here ==================== -->
+<section class="breadcrumb">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="breadcrumb__wrapper">
+          <h2 class="breadcrumb__title">Login</h2>
+          <ul class="breadcrumb__list">
+            <li class="breadcrumb__item"><a href="index.html" class="breadcrumb__link">Home</a></li>
+            <li class="breadcrumb__item"><i class="fa-solid fa-chevron-right"></i></li>
+            <li class="breadcrumb__item"><span class="breadcrumb__item-text">Login</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ==================== Breadcrumb End Here ==================== -->
   <section class="account py-120">
-    <div class="common__pattern-2"></div>
     <div class="container">
-      <div class="row">
-        <div class="col-12">
-            <div class="account__inner">
-                <div class="account__form-wrap">
+      <div class="account__inner">
+        <div class="row g-0">
+          <div class="col-lg-6">
+            <div class="account__thumb">
+              <img src="assets/images/login.jpg" alt="img">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <form class="account__form">
+              <div class="row  gx-3 gy-4">
+                <div class="col-12">
                   <a href="index.html" class="logo">
                     <img src="assets/images/logo/logo.png" alt="img">
                   </a>
-                  <form class="account__form">
-                    <div class="row  gx-3 gy-4">
-                      <div class="col-12">
-                        <div class="account__header">
-                          <h6 class="account__subtitle">Welcome back!</h6>
-                          <h2 class="account__title">Sign Up your account</h2>
-                          <p class="account__desc">It only takes a minute to start earning with surveys you’ll actually enjoy.</p>
-                        </div>
-                      </div>
-                      <div class="col-xl-6 col-md-6 col-sm-6">
-                        <input type="text" class="form-control" id="username" placeholder="Username" required>
-                      </div>
-                      <div class="col-xl-6 col-md-6 col-sm-6">
-                        <input type="email" class="form-control" id="email" placeholder="Email Address" required>
-                      </div>
-                      <div class="col-xl-6 col-md-6 col-sm-6">
-                        <select id="country" name="country" class=" select2" required>
-                          <option value="">Select Country</option>
-                          <option value="bd">Bangladesh</option>
-                          <option value="us">United State of America</option>
-                          <option value="uk">United Kingdom</option>
-                          <option value="in">India</option>
-                          <option value="aus">Australia</option>
-                        </select>
-                      </div>
-                      <div class="col-xl-6 col-md-6 col-sm-6">
-                        <div class="input-group">
-                          <span class="input-group-text">+880</span>
-                          <input type="tel" id="phoneNumber" class="form-control" placeholder="Phone">
-                        </div>
-                      </div>
-                      <div class="col-xl-6 col-md-6 col-sm-6">
-                        <div class="password__input">
-                          <input id="your-password" type="password" class="form-control" placeholder="Password" required>
-                          <span class="password-show-hide fas fa-eye toggle-password" id="#your-password"></span>
-                        </div>
-                      </div>
-                      <div class="col-xl-6 col-md-6 col-sm-6">
-                        <div class="password__input">
-                          <input id="confirm-password" type="password" class="form-control" placeholder="Confirm Password"
-                            required>
-                          <span class="password-show-hide fas fa-eye toggle-password" id="#confirm-password"></span>
-                        </div>
-                      </div>
-                      <div class="col-sm-12">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="remember">
-                          <label class="form-check-label" for="remember">I agree with <a href="#" class="btn--underline">Privacy
-                              Policy</a>, <a href="#" class="btn--underline">Terms of
-                              Service</a></label>
-                        </div>
-                      </div>
-                      <div class="col-sm-12">
-                        <button type="submit" class="btn btn--base w-100">Sign Up</button>
-                      </div>
-                      <div class="col-sm-12">
-                        <div class="have-account text-center">
-                          <p class="have-account__text">Already Have An Account? <a href="login.html" class="btn--underline">Sign
-                              In</a> Here</p>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
                 </div>
-            </div>
+                <div class="col-12">
+                  <div class="account__header">
+                    <h2 class="account__title">Welcome Back!</h2>
+                    <p class="account__desc">It only takes a minute to start earning with surveys you’ll actually
+                      enjoy.</p>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-md-6 col-sm-6">
+                  <input type="text" class="form-control" id="username" placeholder="Username" required>
+                </div>
+                <div class="col-xl-6 col-md-6 col-sm-6">
+                  <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                </div>
+                <div class="col-xl-6 col-md-6 col-sm-6">
+                  <select id="country" name="country" class=" select2" required>
+                    <option value="">Select Country</option>
+                    <option value="bd">Bangladesh</option>
+                    <option value="us">United State of America</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="in">India</option>
+                    <option value="aus">Australia</option>
+                  </select>
+                </div>
+                <div class="col-xl-6 col-md-6 col-sm-6">
+                  <div class="input-group">
+                    <span class="input-group-text">+880</span>
+                    <input type="tel" id="phoneNumber" class="form-control" placeholder="Phone">
+                  </div>
+                </div>
+                <div class="col-xl-6 col-md-6 col-sm-6">
+                  <div class="password__input">
+                    <input id="your-password" type="password" class="form-control" placeholder="Password" required>
+                    <span class="password-show-hide fas fa-eye toggle-password" id="#your-password"></span>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-md-6 col-sm-6">
+                  <div class="password__input">
+                    <input id="confirm-password" type="password" class="form-control" placeholder="Confirm Password"
+                      required>
+                    <span class="password-show-hide fas fa-eye toggle-password" id="#confirm-password"></span>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="remember">
+                    <label class="form-check-label" for="remember">I agree with <a href="#"
+                        class="btn--underline">Privacy
+                        Policy</a>, <a href="#" class="btn--underline">Terms of
+                        Service</a></label>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <button type="submit" class="btn btn--base w-100">Sign Up</button>
+                </div>
+                <div class="col-sm-12">
+                  <div class="have-account text-center">
+                    <p class="have-account__text">Already Have An Account? <a href="login.html"
+                        class="btn--unstyle text--base">Sign
+                        In</a> Here</p>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
   </section>
 </main>
+<!-- ==================== Footer Start Here ==================== -->
+<footer class="footer pt-120">
+    <div class="container">
+        <div class="row gy-5">
+            <div class="col-xl-4 footer__item_left">
+                <div class="footer__item footer__first-item">
+                    <div class="footer__logo">
+                        <a href="index.html" class="logo"> <img src="assets/images/logo/logo.png" alt="img"></a>
+                    </div>
+                    <p class="footer__desc">Welcome to WavePods, the ultimate destination for all things podcasting! Our website offers a wide variety of</p>
+                    <ul class="social-list">
+                        <li class="social-list__item"><a href="https://www.facebook.com" class="social-list__link flex-center"><i class="fab fa-facebook-f"></i></a> </li>
+                        <li class="social-list__item"><a href="https://www.twitter.com" class="social-list__link flex-center"> <i class="fab fa-twitter"></i></a></li>
+                        <li class="social-list__item"><a href="https://www.linkedin.com" class="social-list__link flex-center"> <i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="social-list__item"><a href="https://www.pinterest.com" class="social-list__link flex-center"> <i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-8 footer__item_right pb-60">
+                <div class="footer__inner">
+                    <div class="footer__item">
+                        <div class="footer__item-inner">
+                            <h5 class="footer__title">Product</h5>
+                            <ul class="footer__menu">
+                                <li class="footer__menu-item"><a href="#" class="footer__menu-link">Features</a></li>
+                                <li class="footer__menu-item"><a href="#" class="footer__menu-link">Pricing</a></li>
+                                <li class="footer__menu-item"><a href="#" class="footer__menu-link">Security</a></li>
+                                <li class="footer__menu-item"><a href="#" class="footer__menu-link">Roadmap</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__item">
+                         <div class="footer__item-inner">
+                             <h5 class="footer__title">Legal Links</h5>
+                             <ul class="footer__menu">
+                                 <li class="footer__menu-item"><a href="sign-in.html" class="footer__menu-link">Privacy Policy</a>
+                                 </li>
+                                 <li class="footer__menu-item"><a href="register.html" class="footer__menu-link">Terms of services</a>
+                                 </li>
+                                 <li class="footer__menu-item"><a href="#" class="footer__menu-link">Cookie Policy</a>
+                                 </li>
+                                 <li class="footer__menu-item"><a href="#" class="footer__menu-link">GDPR</a></li>
+                             </ul>
+                         </div>
+                    </div>
+                    <div class="footer__item footer__newsletter">
+                         <div class="footer__item-inner">
+                             <h5 class="footer__title">Subscribe Our Newsletter</h5>
+                             <p class="footer__desc">Get tips, tutorials, and updates on new AI design features.</p>
+                             <form action="/" class="footer__form">
+                                 <div class="input-group">
+                                     <input type="email" class="form-control" name="email"
+                                         placeholder="Enter email address">
+                                     <button class="btn btn--base" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                                 </div>
+                             </form>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Top End-->
+    <!-- bottom Footer -->
+    <div class="footer__bottom ">
+        <div class="container">
+            <div class="row gy-3">
+                <div class="col-md-12 text-center">
+                    <p class="footer__bottom-text"> &copy; Copyright 2025 . All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- ==================== Footer End Here ==================== -->
 <!-- Jquery js -->
 <script src="assets/js/jquery-3.7.1.min.js"></script>
 <!-- Bootstrap Bundle Js -->
